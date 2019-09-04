@@ -1,0 +1,26 @@
+{
+  "name": "tracyhop",
+  "version": "1.0.0",
+  "description": "Traceroute wrapper with geo ip features",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyabb/tracyHop.git"
+  },
+  "keywords": [
+    "traceroute",
+    "tracert"
+  ],
+  "author": "Ruslan Zyabbarov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zyabb/tracyHop/issues"
+  },
+  "homepage": "https://github.com/zyabb/tracyHop#readme",
+  "dependencies": {
+    "chalk": "^2.4.2"
+  }
+}
