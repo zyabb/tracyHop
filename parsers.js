@@ -21,4 +21,21 @@ const parseHop = hopData => {
   return result;
 };
 
-module.exports = parseHop;
+const parseWinHop = hopData => {
+  const regex = /^\s*(\d*)\s*(<?\d+\sms|\*)\s*(<?\d+\sms|\*)\s*(<?\d+\sms|\*)\s*([a-zA-Z0-9:.\s]+)/;
+  const parsedData = new RegExp(regex, '').exec(hopData);
+
+  let result = null;
+  if (parsedData !== null) {
+    result = {
+      hop: parseInt(parsedData[1], 10),
+      rtt1: parsedData[2],
+      rtt2: parsedData[3],
+      rtt3: parsedData[4],
+      ip: parsedData[5].trim(),
+    };
+  }
+
+  return result;
+};
+module.exports = { parseHop, parseWinHop };
