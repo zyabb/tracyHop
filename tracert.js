@@ -10,6 +10,11 @@ const child = spawn('tracert', ['-d', argument], {
   // shell: true,
 });
 
+child.on('error', function(err) {
+  console.log('This is not win32 system. Run traceroute ', argument);
+  console.err(err);
+});
+
 const rl = require('readline').createInterface({ input: child.stdout });
 
 rl.on('line', function(line) {
